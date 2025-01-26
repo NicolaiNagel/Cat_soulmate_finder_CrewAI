@@ -19,6 +19,20 @@ This application utilizes CrewAI to create a team of agents that work together t
 1.  Make sure that uv is installed https://docs.astral.sh/uv/getting-started/installation/
 2.  Run the main script: `uv run python src/cat_soulmate_finder_crewai/main.py`
 
+## Docker Support
+
+This project includes a `dockerfile` and `docker-compose.yml` for containerization and easy deployment.
+
+-   **dockerfile**:  Used to build a Docker image for the Cat Soulmate Finder application. It sets up the Python environment and installs the necessary dependencies.
+-   **docker-compose.yml**:  Defines and manages multi-container Docker applications. In this project, it can be used to orchestrate the application and any other services it might depend on (though currently, it's configured for a single-container application).
+
+To run the application using Docker:
+
+1.  Ensure you have Docker installed and running on your system.
+2.  Navigate to the project root directory in your terminal.
+3.  Build the Docker image using: `docker build -t cat-soulmate-finder .`
+4.  Run the application using Docker Compose: `docker-compose up`
+
 ## Project Structure
 
 -   `src/`: Contains the source code.
@@ -41,5 +55,3 @@ This application utilizes CrewAI to create a team of agents that work together t
 *   **Cat Human Comparison Task:** This task focuses on identifying the best 5 cat breeds that match a given human personality and lifestyle. It uses the information gathered in the previous task to recommend compatible breeds.
 *   **Generate Report Task:** This task involves generating a comprehensive report containing information about the selected cat breeds and explaining why they are a perfect fit for the user. The report includes details about each breed's size, weight, lifespan, price, and compatibility with other pets.
 *   **Quality Control Task:** This task is responsible for reviewing the generated report for spelling and grammatical errors, improving the overall writing quality, and ensuring the report meets high standards.
-
-

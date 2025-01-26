@@ -8,8 +8,11 @@ dependencies = [
     "agentops>=0.3.24",
     "crewai>=0.95.0",
     "crewai-tools>=0.32.1",
+    "fastapi[standard]>=0.115.6",
     "langchain-community>=0.3.14",
     "python-dotenv>=1.0.1",
+    "wandb>=0.19.4",
+    "weave>=0.51.31",
     "wikipedia>=1.4.0",
 ]
 

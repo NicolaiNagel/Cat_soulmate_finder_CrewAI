@@ -3,11 +3,15 @@ import agentops
 from crewai import Crew, Process
 from cat_soulmate_finder_crewai.agents import research_Agent, writer_Agent, editor_Agent
 from cat_soulmate_finder_crewai.tasks import cat_internet_research_task, cat_human_comparison_task, generate_report_task
+#import weave
 
 agentops.init()
 load_dotenv(override=True)
 
+#@weave.op()
 def main():
+    #weave.init("mfmezger/nnagel-llmcourse")
+    
     crew = Crew(
     agents=[research_Agent, writer_Agent, editor_Agent],
     tasks=[cat_internet_research_task, cat_human_comparison_task, generate_report_task],

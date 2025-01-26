@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  fastapi-app:
+    build: .
+    ports:
+      - "8001:8001"  # Expose FastAPI on port 8000
+    environment:
+      - PYTHONUNBUFFERED=1  # This makes Python logs appear in real-time
