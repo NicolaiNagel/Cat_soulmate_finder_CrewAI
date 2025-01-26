@@ -1,0 +1,21 @@
+[project]
+name = "cat-soulmate-finder-crewai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "agentops>=0.3.24",
+    "crewai>=0.95.0",
+    "crewai-tools>=0.32.1",
+    "langchain-community>=0.3.14",
+    "python-dotenv>=1.0.1",
+    "wikipedia>=1.4.0",
+]
+
+[project.scripts]
+cat-soulmate-finder-crewai = "cat_soulmate_finder_crewai:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
